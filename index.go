@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
-
+	"encoding/json"
 	"github.com/gorilla/mux"
 )
 
@@ -51,8 +51,8 @@ func main() {
 		for rows.Next() {
 			var hero Hero
 			if err := rows.Scan(
-				&hero.id,
-				&hero.name,
+				&hero.ID,
+				&hero.Name,
 			); err != nil {
 				http.Error(w, err.Error(), http.StatusInternalServerError)
 				return
@@ -65,8 +65,14 @@ func main() {
 			return
 		}
 
-		fmt.Println("Heroes: ", heroes)
-		fmt.Fprintf(w, "{ heroes: %v }", heroes)
+		// fmt.Println("Heroes: ", heroes)
+		// fmt.Fprintf(w, "{ heroes: %v }", heroes)
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusOK)
+		if err := json.NewEncoder(w).Encode(heroes); err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
 	}).Methods("GET")
 
 	fmt.Println("Server is running on port ", PORT)

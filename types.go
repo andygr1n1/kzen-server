@@ -1,6 +1,7 @@
 package main
 
 type Hero struct {
-	id   string
-	name string
+	ID   string `json:"id"`
+	Name string `json:"name"`
 }
+
