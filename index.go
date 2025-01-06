@@ -1,9 +1,10 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
-	"encoding/json"
+
 	"github.com/gorilla/mux"
 )
 
@@ -23,10 +24,12 @@ func main() {
 	r := mux.NewRouter()
 
 	// Root handler for index.html or other routes
-	r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Println("Root handler")
+	r.HandleFunc("/", Logging(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Println("Root handler | Welcome to blackhat!!!")
 		fmt.Fprintf(w, "Welcome to blackhat!!!")
-	}).Methods("GET").Host("localhost:9998").Schemes("http")
+	})).Methods("GET").Host("localhost:9998").Schemes("http")
+
+	r.HandleFunc("/test-chain", Chain(GlobalHello, ValidateMethod("GET"), AdvancedLogging())).Methods("GET").Host("localhost:9998").Schemes("http")
 
 	r.HandleFunc("/goals/filtered/{filterType}", func(w http.ResponseWriter, r *http.Request) {
 		filterType := r.URL.Query().Get("filter")
