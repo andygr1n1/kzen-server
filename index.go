@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -79,5 +80,7 @@ func main() {
 	}).Methods("GET")
 
 	fmt.Println("Server is running on port ", PORT)
-	http.ListenAndServe(PORT, r)
+	if err := http.ListenAndServe(PORT, r); err != nil {
+		log.Fatal("Error starting server: ", err)
+	}
 }
