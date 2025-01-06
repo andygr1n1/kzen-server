@@ -1,4 +1,3 @@
-
 ## init
 
 ```
@@ -8,4 +7,12 @@ go mod tidy
 
 ```
 go get -u github.com/gorilla/mux
+```
+
+```
+go get github.com/lib/pq
+```
+
+```
+go get github.com/joho/godotenv
 ```
