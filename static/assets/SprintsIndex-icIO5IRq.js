@@ -1,2 +1,0 @@
-import{o as t,j as r}from"./index-Cx9aHWms.js";import{M as e}from"./ProtectedRoutes-BInEfiaw.js";import"./antd-bK47dtYc.js";import"./react-day-picker-BMg2DGmo.js";import"./formik.esm-ADxEa5mi.js";import"./cn-Bz47sbbS.js";import"./useMatchMedia.hook-CVR6FWmx.js";import"./useMutation-D6aZmw1J.js";const f=t(()=>r.jsx(e,{children:r.jsx("div",{className:"mb-5 flex w-full flex-wrap justify-start gap-8",children:r.jsx("div",{className:"flex flex-col gap-10 w-full max-w-[600px] mx-auto relative"})})}));export{f as default};
-//# sourceMappingURL=SprintsIndex-icIO5IRq.js.map

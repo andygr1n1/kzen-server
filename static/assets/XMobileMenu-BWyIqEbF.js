@@ -1,2 +1,0 @@
-import{j as o}from"./index-Cx9aHWms.js";import{p as t}from"./antd-bK47dtYc.js";const a=e=>o.jsx(t,{closeIcon:e.closeIcon||!1,placement:"bottom",height:e.height||"450px",styles:{header:{borderBottom:"1px solid #19273b"},footer:{borderTop:"1px solid transparent"}},footer:e.footer||o.jsx("div",{className:"h-14"}),...e,children:e.children});export{a as X};
-//# sourceMappingURL=XMobileMenu-BWyIqEbF.js.map

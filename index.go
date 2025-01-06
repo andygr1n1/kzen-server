@@ -2,9 +2,8 @@ package main
 
 import (
 	"fmt"
-	"mime"
 	"net/http"
-	"path/filepath"
+	"github.com/gorilla/mux"
 )
 
 const (
@@ -12,42 +11,25 @@ const (
 )
 
 func main() {
-	// Add correct MIME type for JavaScript files
-	mime.AddExtensionType(".js", "application/javascript")
 
-	// Serve static files (CSS, images, etc.) from /static
-	http.Handle("/static/", http.StripPrefix("/static/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		if filepath.Ext(r.URL.Path) == ".js" {
-			w.Header().Set("Content-Type", "application/javascript") // Correct MIME type for JS
-		}
-		if filepath.Ext(r.URL.Path) == ".css" {
-			w.Header().Set("Content-Type", "text/css") // Correct MIME type for CSS
-		}
-		http.FileServer(http.Dir("static")).ServeHTTP(w, r)
-	})))
-
-	// Serve Assets files specifically from /static/assets
-	http.Handle("/assets/", http.StripPrefix("/assets/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		if filepath.Ext(r.URL.Path) == ".js" {
-			w.Header().Set("Content-Type", "application/javascript") // Correct MIME type for JS
-		}
-		if filepath.Ext(r.URL.Path) == ".css" {
-			w.Header().Set("Content-Type", "text/css") // Correct MIME type for CSS
-		}
-
-		http.FileServer(http.Dir("static/assets")).ServeHTTP(w, r)
-	})))
-
-	// Serve Images files specifically from /static/img
-	http.Handle("/img/", http.StripPrefix("/img/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		http.FileServer(http.Dir("static/img")).ServeHTTP(w, r)
-	})))
+	r := mux.NewRouter()
 
 	// Root handler for index.html or other routes
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "static/index.html")
-	})
+	r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Println("Root handler")
+		fmt.Fprintf(w, "Welcome to blackhat!!!")
+	}).Methods("GET").Host("localhost:9998").Schemes("http")
+
+	r.HandleFunc("/goals/filtered/{filterType}", func(w http.ResponseWriter, r *http.Request) {
+		filterType := r.URL.Query().Get("filter")
+		fmt.Println("Filter type: ", filterType)
+
+		vars := mux.Vars(r)
+		fmt.Println("Vars: ", vars)
+		fmt.Println("Vars: ", vars["filterType"])
+		fmt.Fprintf(w, "Filter type: %s", vars["filterType"])
+	}).Methods("GET")
 
 	fmt.Println("Server is running on port ", PORT)
-	http.ListenAndServe(PORT, nil)
+	http.ListenAndServe(PORT, r)
 }

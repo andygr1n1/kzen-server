@@ -1,2 +1,0 @@
-import{o as t,j as e,F as s,A as r}from"./index-Cx9aHWms.js";const o=t(()=>e.jsxs("div",{className:"font-kzen flex my-4 h-10 w-full flex-initial flex-col items-center justify-center",children:[e.jsx("div",{className:"text-xs opacity-70 cursor-default ",children:"Already have an account?"}),e.jsx(s,{className:"cursor-pointer text-sm opacity-70 hover:text-blue-600 hover:underline hover:opacity-100",to:`/${r.LOGIN}`,children:"Login"})]}));export{o as A};
-//# sourceMappingURL=AlreadyHaveAccount-DHEPUX3t.js.map

@@ -1,2 +1,0 @@
-import{G as e}from"./index-Cx9aHWms.js";const t=e.enum(["active","favorite","archived","deleted","all"]),s=t.Values,a=e.object({id:e.string().uuid(),description:e.string(),tag:e.string().nullable(),created_at:e.string(),deleted_at:e.string().nullable(),is_favorite:e.boolean(),archived:e.boolean(),label_id:e.string().uuid().nullable(),label:e.object({name:e.string()}).nullable()}),l=e.object({notes:e.array(a)});export{t as a,a as b,l as c,s as n};
-//# sourceMappingURL=types-8-lvdrKU.js.map

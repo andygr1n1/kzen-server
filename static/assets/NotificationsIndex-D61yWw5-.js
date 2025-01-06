@@ -1,2 +1,0 @@
-import{j as t,R as o,a as r}from"./index-Cx9aHWms.js";import{M as s}from"./ProtectedRoutes-BInEfiaw.js";import"./antd-bK47dtYc.js";import"./react-day-picker-BMg2DGmo.js";import"./formik.esm-ADxEa5mi.js";import"./cn-Bz47sbbS.js";import"./useMatchMedia.hook-CVR6FWmx.js";import"./useMutation-D6aZmw1J.js";const e=()=>t.jsx(s,{children:t.jsx("div",{className:"flex flex-col gap-5 w-full max-w-[600px] mx-auto"})}),c=()=>t.jsx(o,{children:t.jsx(r,{path:"/",element:t.jsx(e,{})})});export{c as default};
-//# sourceMappingURL=NotificationsIndex-D61yWw5-.js.map

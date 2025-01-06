@@ -1,2 +1,0 @@
-import{j as a}from"./index-Cx9aHWms.js";import{u as o,X as r}from"./formik.esm-ADxEa5mi.js";import"./types-CKSFNBik.js";const l=()=>{const e=o();return a.jsx(r,{autoComplete:"email",className:"w-[220px]",placeholder:"Email",name:"email",value:e.values.email,onChange:e.handleChange,error:e.touched.email&&!!e.errors.email,errorMessage:e.errors.email})};export{l as A};
-//# sourceMappingURL=AuthEmailInput-D-YlC4Gb.js.map

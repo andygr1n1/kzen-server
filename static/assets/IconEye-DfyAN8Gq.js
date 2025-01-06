@@ -1,2 +1,0 @@
-import{j as e}from"./index-Cx9aHWms.js";function s(o){return e.jsx("svg",{xmlns:"http://www.w3.org/2000/svg",width:"1em",height:"1em",viewBox:"0 0 24 24",...o,children:e.jsxs("g",{fill:"none",stroke:"currentColor",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:2,children:[e.jsx("path",{d:"M5 12s2.545-5 7-5c4.454 0 7 5 7 5s-2.546 5-7 5c-4.455 0-7-5-7-5"}),e.jsx("path",{d:"M12 13a1 1 0 1 0 0-2a1 1 0 0 0 0 2m9 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2M21 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2"})]})})}export{s as I};
-//# sourceMappingURL=IconEye-DfyAN8Gq.js.map

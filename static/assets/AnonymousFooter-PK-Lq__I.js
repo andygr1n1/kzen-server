@@ -1,2 +1,0 @@
-import{o as s,j as t}from"./index-Cx9aHWms.js";import"./antd-bK47dtYc.js";import"./react-day-picker-BMg2DGmo.js";const r="_bottom_becqd_13",e={"triangle-left":"_triangle-left_becqd_1","triangle-right":"_triangle-right_becqd_7",bottom:r},l=s(()=>t.jsxs("div",{className:"relative flex h-20 items-center justify-between bg-transparent",children:[t.jsx("div",{className:e["triangle-left"]}),t.jsx("div",{className:e["triangle-right"]}),t.jsx("div",{className:e.bottom})]}));export{l as default};
-//# sourceMappingURL=AnonymousFooter-PK-Lq__I.js.map
