@@ -16,3 +16,7 @@ go get github.com/lib/pq
 ```
 go get github.com/joho/godotenv
 ```
+
+### Documentation
+
+https://gowebexamples.com/mysql-database/
