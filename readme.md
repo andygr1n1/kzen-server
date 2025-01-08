@@ -24,8 +24,31 @@ go get github.com/joho/godotenv
 
 ```
 go run cmd/api/*.go
+***
+air
 ```
 
 ### Documentation
 https://gowebexamples.com/
 https://gowebexamples.com/mysql-database/
+
+#### ORM
+
+```
+gorm
+sqlx
+sqlboiler
+```
+
+#### Migration
+
+```
+golang-migrate/migrate
+goose
+```
+
+```
+migrate create -seq -ext sql -dir ./cmd/migrate/migrations create_heroes  
+
+migrate -path ./cmd/migrate/migrations -database postgres://postgres:grini@localhost:6008/kzen?sslmode=disable up
+```
