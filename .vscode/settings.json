@@ -1,3 +1,13 @@
 {
-    "cSpell.words": ["andygr", "citext", "dbname", "godotenv", "kzen", "sslmode", "yourprojectname", "yourusername"]
+    "cSpell.words": [
+        "andygr",
+        "citext",
+        "dbname",
+        "fkey",
+        "godotenv",
+        "kzen",
+        "sslmode",
+        "yourprojectname",
+        "yourusername"
+    ]
 }

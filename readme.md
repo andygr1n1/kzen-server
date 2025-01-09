@@ -50,5 +50,6 @@ goose
 ```
 migrate create -seq -ext sql -dir ./cmd/migrate/migrations create_heroes  
 
-migrate -path ./cmd/migrate/migrations -database postgres://postgres:grini@localhost:6008/kzen?sslmode=disable up
+migrate -path ./cmd/migrate/migrations -database postgres://postgres:grini@localhost:6008/kzen\?sslmode=disable up
+
 ```

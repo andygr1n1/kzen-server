@@ -13,12 +13,12 @@ import (
 func main() {
 	loadEnv()
 	/* env */
-	port := env.GetString("PORT", "8080")
+	port := env.GetString("PORT", "6688")
 	dbHost := env.GetString("DB_HOST", "localhost")
 	dbPort := env.GetString("DB_PORT", "6008")
 	dbUser := env.GetString("DB_USER", "postgres")
 	dbPassword := env.GetString("DB_PASSWORD", "grini")
-	dbName := env.GetString("DB_NAME", "public")
+	dbName := env.GetString("DB_NAME", "kzen")
 	/* db address */
 	dbAddr := fmt.Sprintf("host=%s port=%s user=%s "+
 		"password=%s dbname=%s sslmode=disable",
