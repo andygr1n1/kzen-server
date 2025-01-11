@@ -53,3 +53,11 @@ migrate create -seq -ext sql -dir ./cmd/migrate/migrations create_heroes
 migrate -path ./cmd/migrate/migrations -database postgres://postgres:grini@localhost:6008/kzen\?sslmode=disable up
 
 ```
+
+### curl
+
+```
+curl -X GET http://localhost:8080/v1/health-check
+
+curl http://localhost:6688/v1/health-check -v
+```

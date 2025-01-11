@@ -32,6 +32,8 @@ func main() {
 			maxIdleConns: env.GetInt("DB_MAX_IDLE_CONNS", 30),
 			maxIdleTime:  env.GetDuration("DB_MAX_IDLE_TIME", 15*time.Minute),
 		},
+		env:     env.GetString("ENV", "development"),
+		version: env.GetString("VERSION", "1.0.0"),
 	}
 
 	db, err := db.Connect(cfg.db.addr, cfg.db.maxOpenConns, cfg.db.maxIdleConns, cfg.db.maxIdleTime)

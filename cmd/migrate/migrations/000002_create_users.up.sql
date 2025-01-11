@@ -1,8 +1,8 @@
 CREATE TABLE IF NOT EXISTS users (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    name VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL CHECK (name <> ''),
     phone VARCHAR(255) NULL,
-    email citext UNIQUE NOT NULL,
+    email citext UNIQUE NOT NULL CHECK (email <> ''),
     avatar TEXT NULL,
     birth_date TIMESTAMP NULL,
     coins INT DEFAULT 0,
